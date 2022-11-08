@@ -39,8 +39,6 @@ public class CreateAccount extends javax.swing.JFrame {
 
         jLabel1_Password.setText("Password");
 
-        jPasswordField1_Password.setText("jPasswordField1");
-
         jToggleButton1_CreateAccount.setText("Create Account");
 
         jToggleButton1_ReturnToLogIn.setText("Return to Log In");
