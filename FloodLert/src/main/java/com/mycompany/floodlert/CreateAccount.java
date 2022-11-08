@@ -4,6 +4,11 @@
  */
 package com.mycompany.floodlert;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author johnm
@@ -40,6 +45,11 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel1_Password.setText("Password");
 
         jButton1_CreateAccount.setText("Create Account");
+        jButton1_CreateAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_CreateAccountActionPerformed(evt);
+            }
+        });
 
         jButton1_ReturnToLogIn.setText("Return to Log In");
         jButton1_ReturnToLogIn.addActionListener(new java.awt.event.ActionListener() {
@@ -88,11 +98,38 @@ public class CreateAccount extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1_ReturnToLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_ReturnToLogInActionPerformed
-        // TODO add your handling code here:
+    private void returnToMainMenu (){
         LogIn.main(null);
         this.dispose();
+    }
+    
+    private void jButton1_ReturnToLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_ReturnToLogInActionPerformed
+        // TODO add your handling code here:
+        returnToMainMenu();
     }//GEN-LAST:event_jButton1_ReturnToLogInActionPerformed
+
+    private void jButton1_CreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_CreateAccountActionPerformed
+        // TODO add your handling code here:
+                try 
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
+            String sql = "insert into login values (?,?)";
+            
+            PreparedStatement psmt = conn.prepareStatement(sql);
+           
+            psmt.setString(1, jTextField1_Username.getText());
+            psmt.setString(2, jPasswordField1_Password.getText());
+         
+            psmt.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Account Created!");
+            returnToMainMenu();
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_jButton1_CreateAccountActionPerformed
 
     /**
      * @param args the command line arguments
