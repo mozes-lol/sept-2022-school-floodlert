@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.floodlert;
-
 /**
  *
  * @author johnm
@@ -40,14 +39,17 @@ public class LogIn extends javax.swing.JFrame {
 
         jLabel1_Password.setText("Password");
 
-        jPasswordField1_Password.setText("jPasswordField1");
-
         jButton1_LogIn.setText("Log In");
 
         jLabel1_NewToFloodlert.setText("New to Floodlert?");
         jLabel1_NewToFloodlert.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jToggleButton1_CreateAccount.setText("Create Account");
+        jToggleButton1_CreateAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1_CreateAccountActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,6 +93,10 @@ public class LogIn extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleButton1_CreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1_CreateAccountActionPerformed
+       // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1_CreateAccountActionPerformed
 
     /**
      * @param args the command line arguments
