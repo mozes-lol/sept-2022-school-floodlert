@@ -35,7 +35,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPasswordField1_Password" pref="124" max="32767" attributes="0"/>
+                          <Component id="jPasswordField1_Password" pref="127" max="32767" attributes="0"/>
                           <Component id="jTextField1_Username" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -60,11 +60,11 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton1_LogIn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel1_NewToFloodlert" min="-2" pref="22" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jToggleButton1_CreateAccount" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

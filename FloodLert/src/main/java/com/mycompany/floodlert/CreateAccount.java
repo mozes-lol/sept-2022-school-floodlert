@@ -31,6 +31,7 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel1_Password = new javax.swing.JLabel();
         jPasswordField1_Password = new javax.swing.JPasswordField();
         jToggleButton1_CreateAccount = new javax.swing.JToggleButton();
+        jToggleButton1_ReturnToLogIn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,6 +42,8 @@ public class CreateAccount extends javax.swing.JFrame {
         jPasswordField1_Password.setText("jPasswordField1");
 
         jToggleButton1_CreateAccount.setText("Create Account");
+
+        jToggleButton1_ReturnToLogIn.setText("Return to Log In");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,7 +60,8 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                             .addComponent(jTextField1_Username)))
-                    .addComponent(jToggleButton1_CreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jToggleButton1_CreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jToggleButton1_ReturnToLogIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -73,6 +77,8 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jToggleButton1_CreateAccount)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton1_ReturnToLogIn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -120,5 +126,6 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1_Password;
     private javax.swing.JTextField jTextField1_Username;
     private javax.swing.JToggleButton jToggleButton1_CreateAccount;
+    private javax.swing.JToggleButton jToggleButton1_ReturnToLogIn;
     // End of variables declaration//GEN-END:variables
 }

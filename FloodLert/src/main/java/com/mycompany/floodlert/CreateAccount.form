@@ -38,6 +38,7 @@
                       </Group>
                   </Group>
                   <Component id="jToggleButton1_CreateAccount" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jToggleButton1_ReturnToLogIn" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -58,6 +59,8 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jToggleButton1_CreateAccount" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jToggleButton1_ReturnToLogIn" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -84,6 +87,11 @@
     <Component class="javax.swing.JToggleButton" name="jToggleButton1_CreateAccount">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create Account"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="jToggleButton1_ReturnToLogIn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Return to Log In"/>
       </Properties>
     </Component>
   </SubComponents>
