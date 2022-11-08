@@ -96,6 +96,8 @@ public class LogIn extends javax.swing.JFrame {
 
     private void jToggleButton1_CreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1_CreateAccountActionPerformed
        // TODO add your handling code here:
+       CreateAccount.main(null);
+       this.dispose();
     }//GEN-LAST:event_jToggleButton1_CreateAccountActionPerformed
 
     /**

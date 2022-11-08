@@ -30,8 +30,8 @@ public class CreateAccount extends javax.swing.JFrame {
         jTextField1_Username = new javax.swing.JTextField();
         jLabel1_Password = new javax.swing.JLabel();
         jPasswordField1_Password = new javax.swing.JPasswordField();
-        jToggleButton1_CreateAccount = new javax.swing.JToggleButton();
-        jToggleButton1_ReturnToLogIn = new javax.swing.JToggleButton();
+        jButton1_CreateAccount = new javax.swing.JButton();
+        jButton1_ReturnToLogIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,9 +39,14 @@ public class CreateAccount extends javax.swing.JFrame {
 
         jLabel1_Password.setText("Password");
 
-        jToggleButton1_CreateAccount.setText("Create Account");
+        jButton1_CreateAccount.setText("Create Account");
 
-        jToggleButton1_ReturnToLogIn.setText("Return to Log In");
+        jButton1_ReturnToLogIn.setText("Return to Log In");
+        jButton1_ReturnToLogIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_ReturnToLogInActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -50,6 +55,7 @@ public class CreateAccount extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1_CreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1_Username)
@@ -58,8 +64,7 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                             .addComponent(jTextField1_Username)))
-                    .addComponent(jToggleButton1_CreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jToggleButton1_ReturnToLogIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1_ReturnToLogIn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -74,14 +79,20 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addComponent(jLabel1_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jToggleButton1_CreateAccount)
+                .addComponent(jButton1_CreateAccount)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton1_ReturnToLogIn)
+                .addComponent(jButton1_ReturnToLogIn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1_ReturnToLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_ReturnToLogInActionPerformed
+        // TODO add your handling code here:
+        LogIn.main(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1_ReturnToLogInActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,11 +130,11 @@ public class CreateAccount extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1_CreateAccount;
+    private javax.swing.JButton jButton1_ReturnToLogIn;
     private javax.swing.JLabel jLabel1_Password;
     private javax.swing.JLabel jLabel1_Username;
     private javax.swing.JPasswordField jPasswordField1_Password;
     private javax.swing.JTextField jTextField1_Username;
-    private javax.swing.JToggleButton jToggleButton1_CreateAccount;
-    private javax.swing.JToggleButton jToggleButton1_ReturnToLogIn;
     // End of variables declaration//GEN-END:variables
 }
