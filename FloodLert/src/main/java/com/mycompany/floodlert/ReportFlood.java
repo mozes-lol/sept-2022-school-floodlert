@@ -4,6 +4,12 @@
  */
 package com.mycompany.floodlert;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author johnm
@@ -40,6 +46,11 @@ public class ReportFlood extends javax.swing.JFrame {
         jLabel1_Where.setText("Where does the flood take place?");
 
         jComboBox1_City.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT CITY", "Alaminos", "Angeles City", "Antipolo", "Bacolod", "Bacoor", "Bago", "Baguio", "Bais", "Balanga", "Batac", "Batangas City", "Bayawan", "Baybay", "Bayugan", "Biñan", "Bislig", "Bogo", "Borongan", "Butuaan", "Cadbadbaran", "Cabanatuan", "Cabuyao", "Cadiz", "Cagayan de Oro", "Calaca", "Calamba", "Calapan", "Calbayog", "Caloocan", "Candon", "Canlaon", "Carcar", "Catbalogan", "Cauayan", "Cavite City", "Ceby City", "Cotabato City", "Dagupan", "Danao", "Dapitan", "Dasmariñas", "Davao City", "Digos", "Dipolog", "Dumaguete", "El Salvador", "Escalante", "Gapan", "General Santos", "General Trias", "Gingoog", "Guihulngan", "Himamaylan", "Ilagan", "Iligan", "Iloilo City", "Imus", "Iriga", "Isabela", "Kabankalan", "Kidapawan", "Koronadal", "La Carlota", "Lamitan", "Laoag", "Lapu-Lapu City", "Las Piñas", "Legazpi", "Ligao", "Lipa", "Lucena", "Maasin", "Mabalacat", "Makati", "Malabon", "Malaybalay", "Malolos", "Mandaluyong", "Mandaue", "Manila", "Marawi", "Marikina", "Masbate City", "Mati", "Mecauayan", "Muñoz", "Muntinlupa", "Naga (Camarines Sur)", "Naga (Cebu)", "Navotas", "Olongapo", "Ormoc", "Oroquieta", "Ozamiz", "Pagadian", "Palayan", "Panabo", "Parañaque", "Pasay", "Pasig", "Passi", "Puerto Princessa", "Quezon City", "Roxas", "Sagay", "Samal", "San Carlos (Negros Occidental)", "San Carlos (Pangasinan)", "San Fernando (La Union)", "San Fernando (Pampanga)", "San Jose", "San Jose del Monte", "San Juan", "San Pablo", "San Pedro", "Santa Rosa", "Santo Tomas", "Santiago", "Silay", "Sipalay", "Sorsogon City", "Surigao City", "Tabaco", "Tabuk", "Tacloban", "Tacurong", "Tagaytay", "Tagbilaran", "Taguig", "Tagum", "Talisay (Cebu)", "Talisay (Negros Occidental)", "Tanauan", "Tandag", "Tangub", "Tanjay", "Tarlac City", "Tayabas", "Toledo", "Trece Martires", "Tuguegarao", "Urdaneta", "Valencia", "Valenzuela", "Victoras", "Vigan", "Zamboanga City" }));
+        jComboBox1_City.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1_CityActionPerformed(evt);
+            }
+        });
 
         jLabel1_WhatIsTheHeight.setText("What is the height of the flood?");
 
@@ -54,6 +65,11 @@ public class ReportFlood extends javax.swing.JFrame {
         jLabel1_Hight.setText("High");
 
         jButton1_SubmitReport.setText("Submit Report");
+        jButton1_SubmitReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_SubmitReportActionPerformed(evt);
+            }
+        });
 
         jButton1_Cancel.setText("Cancel");
         jButton1_Cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +133,34 @@ public class ReportFlood extends javax.swing.JFrame {
         Dashboard.main(null);
         this.dispose();
     }//GEN-LAST:event_jButton1_CancelActionPerformed
+
+    private void jButton1_SubmitReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitReportActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
+            String sql = "insert into floodReport values (?,?,?)"; 
+            
+            PreparedStatement psmt = conn.prepareStatement(sql);
+           
+            psmt.setString(1, jComboBox1_City.getSelectedItem().toString());
+            psmt.setInt(2, jSlider1_FloodLevel.getValue());
+            psmt.setString(3, FloodLert.loggedInUsername);
+            
+            psmt.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Report Submitted!");
+            Dashboard.main(null);
+            this.dispose();
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_jButton1_SubmitReportActionPerformed
+
+    private void jComboBox1_CityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_CityActionPerformed
+        // TODO add your handling code here:
+        System.out.println(jComboBox1_City.getSelectedItem());
+    }//GEN-LAST:event_jComboBox1_CityActionPerformed
 
     /**
      * @param args the command line arguments
