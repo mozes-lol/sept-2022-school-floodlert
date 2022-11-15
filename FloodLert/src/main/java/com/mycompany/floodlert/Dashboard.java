@@ -157,7 +157,7 @@ public class Dashboard extends javax.swing.JFrame {
             
             psmt.executeQuery();
             
-            System.out.println(psmt.executeQuery());
+            jLabel1_FloodLevelData.setText(psmt.executeQuery().toString());
            
         } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
