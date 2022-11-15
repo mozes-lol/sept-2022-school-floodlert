@@ -72,6 +72,11 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         jButton1_SubmitFloodReport.setText("Submit Flood Report");
+        jButton1_SubmitFloodReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_SubmitFloodReportActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,6 +103,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1_SubmitFloodReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitFloodReportActionPerformed
+        // TODO add your handling code here:
+        ReportFlood.main(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1_SubmitFloodReportActionPerformed
 
     /**
      * @param args the command line arguments

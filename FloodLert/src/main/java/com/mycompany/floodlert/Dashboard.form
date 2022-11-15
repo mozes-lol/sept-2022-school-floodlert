@@ -271,6 +271,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit Flood Report"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1_SubmitFloodReportActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

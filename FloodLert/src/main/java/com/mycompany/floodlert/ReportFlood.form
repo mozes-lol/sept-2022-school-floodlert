@@ -41,8 +41,11 @@
                       </Group>
                       <EmptySpace pref="9" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jButton1_SubmitReport" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jButton1_Cancel" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButton1_SubmitReport" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -66,6 +69,8 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton1_SubmitReport" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton1_Cancel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -242,6 +247,13 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JSlider" name="jSlider1_FloodLevel">
+      <Properties>
+        <Property name="majorTickSpacing" type="int" value="1"/>
+        <Property name="maximum" type="int" value="3"/>
+        <Property name="minimum" type="int" value="1"/>
+        <Property name="paintTicks" type="boolean" value="true"/>
+        <Property name="snapToTicks" type="boolean" value="true"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1_Low">
       <Properties>
@@ -257,6 +269,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Submit Report"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1_Cancel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancel"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1_CancelActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -33,6 +33,7 @@ public class ReportFlood extends javax.swing.JFrame {
         jLabel1_Low = new javax.swing.JLabel();
         jLabel1_Hight = new javax.swing.JLabel();
         jButton1_SubmitReport = new javax.swing.JButton();
+        jButton1_Cancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,11 +43,24 @@ public class ReportFlood extends javax.swing.JFrame {
 
         jLabel1_WhatIsTheHeight.setText("What is the height of the flood?");
 
+        jSlider1_FloodLevel.setMajorTickSpacing(1);
+        jSlider1_FloodLevel.setMaximum(3);
+        jSlider1_FloodLevel.setMinimum(1);
+        jSlider1_FloodLevel.setPaintTicks(true);
+        jSlider1_FloodLevel.setSnapToTicks(true);
+
         jLabel1_Low.setText("Low");
 
         jLabel1_Hight.setText("High");
 
         jButton1_SubmitReport.setText("Submit Report");
+
+        jButton1_Cancel.setText("Cancel");
+        jButton1_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_CancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,8 +81,10 @@ public class ReportFlood extends javax.swing.JFrame {
                                 .addComponent(jLabel1_Hight))
                             .addComponent(jComboBox1_City, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(9, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1_SubmitReport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1_Cancel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1_SubmitReport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(6, 6, 6))))
         );
         layout.setVerticalGroup(
@@ -87,11 +103,19 @@ public class ReportFlood extends javax.swing.JFrame {
                     .addComponent(jLabel1_Hight, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1_SubmitReport)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1_Cancel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_CancelActionPerformed
+        // TODO add your handling code here:
+        Dashboard.main(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1_CancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,6 +153,7 @@ public class ReportFlood extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1_Cancel;
     private javax.swing.JButton jButton1_SubmitReport;
     private javax.swing.JComboBox<String> jComboBox1_City;
     private javax.swing.JLabel jLabel1_Hight;
