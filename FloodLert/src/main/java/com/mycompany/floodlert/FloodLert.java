@@ -18,7 +18,8 @@ public class FloodLert {
     }
     
     public static void main(String[] args) {
-        System.out.println("Starting Program");
+        System.out.println("Thank you for using FloodLert!");
+        System.out.println("Starting Program...");
         LogIn.main(null);
     }
 }
