@@ -5,9 +5,12 @@
 package com.mycompany.floodlert;
 
 import static com.mysql.cj.MysqlType.JSON;
+import com.mysql.cj.protocol.Resultset;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -137,7 +140,7 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         FloodLert.loggedInUsername = null;
         FloodLert.LogInPrompt();
-        ReportFlood.main(null);
+        LogIn.main(null);
         this.dispose();
     }//GEN-LAST:event_jButton1_LogOutActionPerformed
 
@@ -146,18 +149,38 @@ public class Dashboard extends javax.swing.JFrame {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
+            Statement psmt = conn.createStatement();
+            String x= String.valueOf(jComboBox1_CitySelect.getSelectedItem());
             String sql = 
-                "SELECT AVG(floodLevel)\n" +
+                "SELECT AVG(floodLevel) as level\n" +
                 "FROM floodreport\n" +
-                "WHERE city=?;";
+                "WHERE city='"+x+"'";
             
-            PreparedStatement psmt = conn.prepareStatement(sql);
-           
-            psmt.setString(1, jComboBox1_CitySelect.getSelectedItem().toString());
+        ResultSet res = psmt.executeQuery(sql);
+
+
+        int flevel2=0;
+        int flevel3=0;
+        String flevel="";
+        while (res.next()){
+            flevel = res.getString("level");
+          
+        }
+        
+        jLabel1_FloodLevelData.setText(flevel);
+        
+        
+         
+//            psmt.setString(1, x);
+//            
+//            System.out.println(jComboBox1_CitySelect.getSelectedItem());
+//            
+//            
+//            System.out.println(psmt.executeQuery());
             
-            psmt.executeQuery();
             
-            jLabel1_FloodLevelData.setText(psmt.executeQuery().toString());
+            
+         
            
         } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
