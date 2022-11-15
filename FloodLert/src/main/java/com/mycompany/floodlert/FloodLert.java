@@ -13,11 +13,12 @@ public class FloodLert {
 
     static String loggedInUsername;
     
-    public static void LogInPromt(){
+    public static void LogInPrompt(){
         System.out.println("You are now logged in as: " + loggedInUsername);
     }
     
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Starting Program");
+        LogIn.main(null);
     }
 }
