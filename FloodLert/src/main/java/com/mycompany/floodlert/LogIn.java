@@ -3,6 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.floodlert;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author johnm
@@ -40,6 +47,11 @@ public class LogIn extends javax.swing.JFrame {
         jLabel1_Password.setText("Password");
 
         jButton1_LogIn.setText("Log In");
+        jButton1_LogIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_LogInActionPerformed(evt);
+            }
+        });
 
         jLabel1_NewToFloodlert.setText("New to Floodlert?");
         jLabel1_NewToFloodlert.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -96,9 +108,40 @@ public class LogIn extends javax.swing.JFrame {
 
     private void jToggleButton1_CreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1_CreateAccountActionPerformed
        // TODO add your handling code here:
-       CreateAccount.main(null);
+       CreateAccount.main(null); // goes to the create account window
        this.dispose();
     }//GEN-LAST:event_jToggleButton1_CreateAccountActionPerformed
+
+    private void jButton1_LogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_LogInActionPerformed
+        try 
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
+            String sql = "select * from login where username=? and password=?";
+            
+            PreparedStatement psmt = conn.prepareStatement(sql);
+            
+            psmt.setString(1, jTextField1_Username.getText());
+            psmt.setString(2, jPasswordField1_Password.getText());
+            
+            ResultSet rs = psmt.executeQuery();
+            
+            if(rs.next() == true) // if password is correct
+            {
+                JOptionPane.showMessageDialog(null, "Login Successful!");
+                Dashboard.main(null);
+                this.dispose();
+            }
+            else // if password is incorrect
+            {
+                JOptionPane.showMessageDialog(null, "Login Failed");
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_jButton1_LogInActionPerformed
 
     /**
      * @param args the command line arguments
