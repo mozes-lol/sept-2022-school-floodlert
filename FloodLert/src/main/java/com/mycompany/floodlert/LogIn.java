@@ -128,6 +128,8 @@ public class LogIn extends javax.swing.JFrame {
             
             if(rs.next() == true) // if password is correct
             {
+                FloodLert.loggedInUsername = jTextField1_Username.getText();
+                FloodLert.LogInPromt();
                 JOptionPane.showMessageDialog(null, "Login Successful!");
                 Dashboard.main(null);
                 this.dispose();

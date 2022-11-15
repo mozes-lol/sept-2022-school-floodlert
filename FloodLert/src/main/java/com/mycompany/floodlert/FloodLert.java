@@ -11,6 +11,12 @@ package com.mycompany.floodlert;
  */
 public class FloodLert {
 
+    static String loggedInUsername;
+    
+    public static void LogInPromt(){
+        System.out.println("You are now logged in as: " + loggedInUsername);
+    }
+    
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
