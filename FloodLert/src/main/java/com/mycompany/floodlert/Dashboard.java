@@ -131,13 +131,13 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1_SubmitFloodReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitFloodReportActionPerformed
-        // TODO add your handling code here:
+        // goes to ReportFlood.java
         ReportFlood.main(null);
         this.dispose();
     }//GEN-LAST:event_jButton1_SubmitFloodReportActionPerformed
 
     private void jButton1_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_LogOutActionPerformed
-        // TODO add your handling code here:
+        // goes to LogIn.java; also resets the logged in username to "null"
         FloodLert.loggedInUsername = null;
         FloodLert.LogInPrompt();
         LogIn.main(null);
@@ -145,7 +145,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1_LogOutActionPerformed
 
     private void jComboBox1_CitySelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_CitySelectActionPerformed
-        // TODO add your handling code here:
+        // Upon selecting a city inside the combo box, it will accumulate the average of the total flood level based on the databse.
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
@@ -158,29 +158,18 @@ public class Dashboard extends javax.swing.JFrame {
             
         ResultSet res = psmt.executeQuery(sql);
 
-
-        int flevel2=0;
-        int flevel3=0;
         String flevel="";
         while (res.next()){
             flevel = res.getString("level");
-          
         }
         
-        jLabel1_FloodLevelData.setText(flevel);
+        // If there's no flood level data for that city, this will display instead.
+        if (flevel == null){
+            flevel = "[NO DATA]";
+        }
         
-        
-         
-//            psmt.setString(1, x);
-//            
-//            System.out.println(jComboBox1_CitySelect.getSelectedItem());
-//            
-//            
-//            System.out.println(psmt.executeQuery());
-            
-            
-            
-         
+        // displays the flood level on the dashboard
+        jLabel1_FloodLevelData.setText(flevel);     
            
         } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);

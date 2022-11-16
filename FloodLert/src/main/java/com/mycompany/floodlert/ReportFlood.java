@@ -129,13 +129,13 @@ public class ReportFlood extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_CancelActionPerformed
-        // TODO add your handling code here:
+        // Goes to Dashboard.java
         Dashboard.main(null);
         this.dispose();
     }//GEN-LAST:event_jButton1_CancelActionPerformed
 
     private void jButton1_SubmitReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitReportActionPerformed
-        // TODO add your handling code here:
+        // Creates a new flood report data in the database.
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
@@ -158,7 +158,7 @@ public class ReportFlood extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1_SubmitReportActionPerformed
 
     private void jComboBox1_CityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_CityActionPerformed
-        // TODO add your handling code here:
+        // specifies the city
         System.out.println(jComboBox1_City.getSelectedItem());
     }//GEN-LAST:event_jComboBox1_CityActionPerformed
 

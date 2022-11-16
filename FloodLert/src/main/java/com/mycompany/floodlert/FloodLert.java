@@ -14,12 +14,12 @@ public class FloodLert {
     static String loggedInUsername;
     
     public static void LogInPrompt(){
-        System.out.println("You are now logged in as: " + loggedInUsername);
+        System.out.println("You are now logged in as: " + loggedInUsername); // for debug
     }
     
     public static void main(String[] args) {
         System.out.println("Thank you for using FloodLert!");
         System.out.println("Starting Program...");
-        LogIn.main(null);
+        LogIn.main(null); // This will allow us to open the Jframe without opening it directly wity "SHIFT + F6."
     }
 }

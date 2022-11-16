@@ -109,8 +109,9 @@ public class CreateAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1_ReturnToLogInActionPerformed
 
     private void jButton1_CreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_CreateAccountActionPerformed
-        // TODO add your handling code here:
-                try 
+        // This creates a new account data on the database.
+        // NOTE: If the username already exists in the database, the account will not be created.
+        try 
         {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/floodlert","root","");
