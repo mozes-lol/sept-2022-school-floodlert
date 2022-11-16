@@ -42,6 +42,7 @@ public class ReportFlood extends javax.swing.JFrame {
         jButton1_Cancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1_Where.setText("Where does the flood take place?");
 

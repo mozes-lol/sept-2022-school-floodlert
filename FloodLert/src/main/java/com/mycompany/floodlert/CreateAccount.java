@@ -39,6 +39,7 @@ public class CreateAccount extends javax.swing.JFrame {
         jButton1_ReturnToLogIn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1_Username.setText("Username");
 

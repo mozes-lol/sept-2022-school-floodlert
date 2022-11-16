@@ -41,6 +41,7 @@ public class LogIn extends javax.swing.JFrame {
         jToggleButton1_CreateAccount = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1_Username.setText("Username");
 
