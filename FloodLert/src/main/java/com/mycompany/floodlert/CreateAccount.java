@@ -20,6 +20,7 @@ public class CreateAccount extends javax.swing.JFrame {
      */
     public CreateAccount() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -124,6 +125,16 @@ public class CreateAccount extends javax.swing.JFrame {
             psmt.setString(2, jPasswordField1_Password.getText());
          
             psmt.executeUpdate();
+            
+            sql = "insert into login_weather value ( ?, ? )";
+            
+            psmt = conn.prepareStatement(sql);
+            
+            psmt.setString(1, jTextField1_Username.getText());
+            psmt.setString(2, "Manila");
+            
+            psmt.executeUpdate();
+            
             JOptionPane.showMessageDialog(null,"Account Created!");
             returnToMainMenu();
         }

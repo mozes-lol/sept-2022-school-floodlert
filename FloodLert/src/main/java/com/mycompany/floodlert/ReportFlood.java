@@ -21,6 +21,7 @@ public class ReportFlood extends javax.swing.JFrame {
      */
     public ReportFlood() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
