@@ -37,7 +37,7 @@ public class DateTime {
     }
     
     public static String localTime() {
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss aa");
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
         Date date = new Date();
         
         if (dateFormat.format(date).charAt(0) != '0') {
