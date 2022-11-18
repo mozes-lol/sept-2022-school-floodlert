@@ -147,7 +147,7 @@ public class ReportFlood extends javax.swing.JFrame {
            
             psmt.setString(1, jComboBox1_City.getSelectedItem().toString());
             psmt.setInt(2, jSlider1_FloodLevel.getValue());
-            psmt.setString(3, FloodLert.loggedInUsername);
+            psmt.setString(3, FloodLert.username);
             
             psmt.executeUpdate();
             JOptionPane.showMessageDialog(null,"Report Submitted!");

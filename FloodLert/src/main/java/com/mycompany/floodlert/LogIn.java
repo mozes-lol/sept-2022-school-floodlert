@@ -16,9 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class LogIn extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LogIn
-     */
+    public static String username;
+    
     public LogIn() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -130,15 +129,14 @@ public class LogIn extends javax.swing.JFrame {
             
             if(rs.next() == true) // if password is correct
             {
-                FloodLert.loggedInUsername = jTextField1_Username.getText();
+                FloodLert.username = jTextField1_Username.getText();
                 FloodLert.LogInPrompt();
-                JOptionPane.showMessageDialog(null, "Login Successful!");
                 Dashboard.main(null);
                 this.dispose();
             }
             else // if password is incorrect
             {
-                JOptionPane.showMessageDialog(null, "Login Failed");
+                JOptionPane.showMessageDialog(null, "Login Does Not Exist");
             }
         }
         catch (Exception e)
@@ -146,7 +144,9 @@ public class LogIn extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jButton1_LogInActionPerformed
-
+        
+ 
+    
     /**
      * @param args the command line arguments
      */
@@ -173,6 +173,8 @@ public class LogIn extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(LogIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        FloodLert.access = false;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -134,8 +134,6 @@ public class CreateAccount extends javax.swing.JFrame {
             psmt.setString(2, "Manila");
             
             psmt.executeUpdate();
-            
-            JOptionPane.showMessageDialog(null,"Account Created!");
             returnToMainMenu();
         }
         catch (Exception e)
