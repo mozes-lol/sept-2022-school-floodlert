@@ -239,7 +239,6 @@ public class Dashboard extends javax.swing.JFrame {
     private void jButton1_SubmitFloodReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitFloodReportActionPerformed
         // goes to ReportFlood.java
         ReportFlood.main(null);
-        this.dispose();
     }//GEN-LAST:event_jButton1_SubmitFloodReportActionPerformed
 
     private void jButton1_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_LogOutActionPerformed

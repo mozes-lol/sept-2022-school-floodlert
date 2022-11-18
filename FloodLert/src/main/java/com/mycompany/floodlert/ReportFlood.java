@@ -42,7 +42,7 @@ public class ReportFlood extends javax.swing.JFrame {
         jButton1_SubmitReport = new javax.swing.JButton();
         jButton1_Cancel = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1_Where.setText("Where does the flood take place?");
@@ -92,7 +92,7 @@ public class ReportFlood extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1_Where, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jComboBox1_City, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(9, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton1_Cancel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -132,7 +132,6 @@ public class ReportFlood extends javax.swing.JFrame {
 
     private void jButton1_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_CancelActionPerformed
         // Goes to Dashboard.java
-        Dashboard.main(null);
         this.dispose();
     }//GEN-LAST:event_jButton1_CancelActionPerformed
 
@@ -151,7 +150,6 @@ public class ReportFlood extends javax.swing.JFrame {
             
             psmt.executeUpdate();
             JOptionPane.showMessageDialog(null,"Report Submitted!");
-            Dashboard.main(null);
             this.dispose();
             
         } catch (Exception e) {
