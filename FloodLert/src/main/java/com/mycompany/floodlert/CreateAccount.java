@@ -138,7 +138,7 @@ public class CreateAccount extends javax.swing.JFrame {
         }
         catch (Exception e)
         {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Login already Exist");
         }
     }//GEN-LAST:event_jButton1_CreateAccountActionPerformed
 
