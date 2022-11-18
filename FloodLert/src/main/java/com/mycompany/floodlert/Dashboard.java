@@ -46,8 +46,8 @@ public class Dashboard extends javax.swing.JFrame {
         location = new javax.swing.JLabel();
         localtime = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        searchbutton = new javax.swing.JButton();
+        searchbar = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -166,7 +166,12 @@ public class Dashboard extends javax.swing.JFrame {
         localtime.setForeground(new java.awt.Color(237, 249, 244));
         localtime.setText("XX:XX XX");
 
-        jButton1.setText("Search");
+        searchbutton.setText("Search");
+        searchbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,10 +186,10 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(searchbar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addGap(97, 97, 97)))
+                        .addComponent(searchbutton)
+                        .addGap(92, 92, 92)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1_FloodLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
@@ -210,10 +215,10 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(basicforecast_box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(searchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(searchbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1_SubmitFloodReport)
@@ -225,7 +230,18 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-     
+     public void searchProcess(String area) {
+        if (area.equals("")) {
+            WeatherAPI.current_area = "";
+            WeatherAPI.fetch(WeatherAPI.currentUserArea());
+        } else if (WeatherAPI.current_area != area){
+            WeatherAPI.current_area = area;
+            WeatherAPI.fetch(WeatherAPI.currentUserArea());
+        }
+        
+        WeatherAPI.setValues();
+    }
+    
     private void jButton1_SubmitFloodReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitFloodReportActionPerformed
         // goes to ReportFlood.java
         ReportFlood.main(null);
@@ -271,7 +287,18 @@ public class Dashboard extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jComboBox1_CitySelectActionPerformed
-
+    public void searchbarKeyPressed(java.awt.event.KeyEvent evt) {                                     
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == 10) {
+            searchProcess(searchbar.getText());
+        }
+    }  
+    
+    private void searchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttonActionPerformed
+    searchProcess(searchbar.getText());
+    }//GEN-LAST:event_searchbuttonActionPerformed
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -311,18 +338,18 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel basicforecast_box;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton1_LogOut;
     private javax.swing.JButton jButton1_SubmitFloodReport;
     private javax.swing.JComboBox<String> jComboBox1_CitySelect;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_FloodLevel;
     private javax.swing.JLabel jLabel1_FloodLevelData;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1_FloodLevel;
     public static javax.swing.JLabel localdate;
     public static javax.swing.JLabel localtime;
     public static javax.swing.JLabel location;
+    private javax.swing.JTextField searchbar;
+    private javax.swing.JButton searchbutton;
     public static javax.swing.JLabel status;
     public static javax.swing.JLabel temp;
     // End of variables declaration//GEN-END:variables
