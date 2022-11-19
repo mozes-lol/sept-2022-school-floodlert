@@ -16,11 +16,15 @@ import javax.swing.UIManager;
 
 
 public class Dashboard extends javax.swing.JFrame {
+
+    static void openResultsForm() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     public Dashboard() {
         initComponents();
         this.setLocationRelativeTo(null);
-        jLabel1.setText("Welcome," +  FloodLert.username + "!");
+        jLabel1.setText("Welcome, " +  FloodLert.username + "!");
         
         WeatherAPI.fetch(WeatherAPI.currentUserArea());
         
@@ -54,7 +58,7 @@ public class Dashboard extends javax.swing.JFrame {
         searchbar = new javax.swing.JTextField();
         settings = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1_FloodLevel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -310,6 +314,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_searchbuttonActionPerformed
 
     private void settingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsActionPerformed
+        this.dispose();
         Settings.main(null);// TODO add your handling code here:
     }//GEN-LAST:event_settingsActionPerformed
     

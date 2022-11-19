@@ -74,6 +74,12 @@ public class DeleteAcc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void returnToMainMenu (){
+        LogIn.main(null);
+        new Dashboard().setVisible(false);
+        this.dispose(); 
+    }
+    
     private void DELETERECORDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DELETERECORDActionPerformed
         try
         {
@@ -91,7 +97,9 @@ public class DeleteAcc extends javax.swing.JFrame {
             psmt.setString(1, jTextField1.getText());
             psmt.executeUpdate();
             JOptionPane.showMessageDialog(null,"Record deleted successfully!!");
-            LogIn.main(null);
+            
+            psmt.executeUpdate();
+            returnToMainMenu();
         }
         catch(Exception e)
         {

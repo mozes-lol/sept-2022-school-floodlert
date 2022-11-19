@@ -37,11 +37,11 @@ public class CreateAccount extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1_Username = new javax.swing.JLabel();
-        jTextField1_Username = new javax.swing.JTextField();
         jLabel1_Password = new javax.swing.JLabel();
         jPasswordField1_Password = new javax.swing.JPasswordField();
         jButton1_CreateAccount = new javax.swing.JButton();
         jButton1_ReturnToLogIn = new javax.swing.JButton();
+        jPasswordField1_Password1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -72,15 +72,15 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1_CreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1_ReturnToLogIn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1_Username)
                             .addComponent(jLabel1_Password))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                            .addComponent(jTextField1_Username)))
-                    .addComponent(jButton1_ReturnToLogIn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPasswordField1_Password1, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                            .addComponent(jPasswordField1_Password))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -89,12 +89,12 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1_Username)
-                    .addComponent(jTextField1_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPasswordField1_Password1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1_CreateAccount)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1_ReturnToLogIn)
@@ -125,7 +125,7 @@ public class CreateAccount extends javax.swing.JFrame {
             
             PreparedStatement psmt = conn.prepareStatement(sql);
            
-            psmt.setString(1, jTextField1_Username.getText());
+            psmt.setString(1, jPasswordField1_Password1.getText());
             psmt.setString(2, jPasswordField1_Password.getText());
          
             psmt.executeUpdate();
@@ -134,7 +134,7 @@ public class CreateAccount extends javax.swing.JFrame {
             
             psmt = conn.prepareStatement(sql);
             
-            psmt.setString(1, jTextField1_Username.getText());
+            psmt.setString(1, jPasswordField1_Password1.getText());
             psmt.setString(2, "Manila");
             
             psmt.executeUpdate();
@@ -171,6 +171,6 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1_Password;
     private javax.swing.JLabel jLabel1_Username;
     private javax.swing.JPasswordField jPasswordField1_Password;
-    private javax.swing.JTextField jTextField1_Username;
+    private javax.swing.JTextField jPasswordField1_Password1;
     // End of variables declaration//GEN-END:variables
 }

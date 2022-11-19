@@ -56,6 +56,11 @@ public class Settings extends javax.swing.JFrame {
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jButton4.setText("Back");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         Delete.setText("Delete");
         Delete.addActionListener(new java.awt.event.ActionListener() {
@@ -107,8 +112,14 @@ public class Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-    DeleteAcc.main(null);// TODO add your handling code here:
+        this.dispose();
+        DeleteAcc.main(null);// TODO add your handling code here:
     }//GEN-LAST:event_DeleteActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    Dashboard.main(null);
+    this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
