@@ -36,6 +36,7 @@ public class Settings extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         Delete = new javax.swing.JButton();
         Password = new javax.swing.JButton();
+        jButton1_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -79,6 +80,13 @@ public class Settings extends javax.swing.JFrame {
             }
         });
 
+        jButton1_LogOut.setText("Log Out");
+        jButton1_LogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_LogOutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,7 +103,10 @@ public class Settings extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ChangeLocation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1_LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -113,9 +124,11 @@ public class Settings extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Delete)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1_LogOut)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -141,6 +154,14 @@ public class Settings extends javax.swing.JFrame {
         ChangeLoc.main(null);           
     }//GEN-LAST:event_ChangeLocationActionPerformed
 
+    private void jButton1_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_LogOutActionPerformed
+        // goes to LogIn.java; also resets the logged in username to "null"
+        FloodLert.username = null;
+        FloodLert.LogInPrompt();
+        LogIn.main(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1_LogOutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -163,6 +184,7 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JButton ChangeLocation;
     private javax.swing.JButton Delete;
     private javax.swing.JButton Password;
+    private javax.swing.JButton jButton1_LogOut;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
