@@ -47,6 +47,11 @@ public class Settings extends javax.swing.JFrame {
         jLabel2.setText("Change Password");
 
         ChangeLocation.setText("Change Location");
+        ChangeLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChangeLocationActionPerformed(evt);
+            }
+        });
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Delete Account");
@@ -128,8 +133,13 @@ public class Settings extends javax.swing.JFrame {
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
         this.dispose();
-        ChangePassword.main(null);        // TODO add your handling code here:
+        ChangePassword.main(null);   
     }//GEN-LAST:event_PasswordActionPerformed
+
+    private void ChangeLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeLocationActionPerformed
+        this.dispose();
+        ChangeLoc.main(null);           
+    }//GEN-LAST:event_ChangeLocationActionPerformed
 
     /**
      * @param args the command line arguments

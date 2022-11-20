@@ -20,7 +20,7 @@ import org.json.JSONObject;
  */
 public class WeatherAPI {
     
-    public static String default_area = "Manila"; // Default New Account Area
+    public static String default_area = "Makati"; // Default New Account Area
     public static String current_area = "";
     
     public static String location, temp, status; // Variables for Basic Weather Forecast
