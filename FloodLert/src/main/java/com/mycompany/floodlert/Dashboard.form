@@ -71,12 +71,12 @@
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1_SubmitFloodReport" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="searchbar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="searchbutton" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jButton1_SubmitFloodReport" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jButton1_LogOut" min="-2" max="-2" attributes="0"/>
