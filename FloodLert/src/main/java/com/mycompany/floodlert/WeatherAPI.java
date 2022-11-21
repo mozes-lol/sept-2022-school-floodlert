@@ -160,7 +160,7 @@ public class WeatherAPI {
             Dashboard.temp.setText(temp);
             Dashboard.status.setText(status);
 
-            // System.out.println("WeatherAPI Data Set");
+            System.out.println("WeatherAPI Data Set");
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         }

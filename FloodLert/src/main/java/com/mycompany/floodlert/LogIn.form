@@ -24,10 +24,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel1_NewToFloodlert" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton1_LogIn" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -41,6 +40,9 @@
                       </Group>
                   </Group>
                   <Component id="jToggleButton1_CreateAccount" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLabel1_NewToFloodlert1" alignment="1" max="32767" attributes="0"/>
+                  <Component id="jLabel1_NewToFloodlert" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Forgot_Password" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -61,11 +63,15 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton1_LogIn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jLabel1_NewToFloodlert" min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel1_NewToFloodlert1" min="-2" pref="22" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jToggleButton1_CreateAccount" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1_NewToFloodlert" min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="Forgot_Password" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="17" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -95,7 +101,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1_NewToFloodlert">
       <Properties>
-        <Property name="text" type="java.lang.String" value="New to Floodlert?"/>
+        <Property name="text" type="java.lang.String" value="Forgot your password?"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
@@ -105,6 +111,20 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1_CreateAccountActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1_NewToFloodlert1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="New to Floodlert?"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Forgot_Password">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Forgot Password"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Forgot_PasswordActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

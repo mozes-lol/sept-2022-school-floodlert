@@ -42,6 +42,8 @@ public class LogIn extends javax.swing.JFrame {
         jButton1_LogIn = new javax.swing.JButton();
         jLabel1_NewToFloodlert = new javax.swing.JLabel();
         jToggleButton1_CreateAccount = new javax.swing.JToggleButton();
+        jLabel1_NewToFloodlert1 = new javax.swing.JLabel();
+        Forgot_Password = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -57,7 +59,7 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
 
-        jLabel1_NewToFloodlert.setText("New to Floodlert?");
+        jLabel1_NewToFloodlert.setText("Forgot your password?");
         jLabel1_NewToFloodlert.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jToggleButton1_CreateAccount.setText("Create Account");
@@ -67,16 +69,25 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
 
+        jLabel1_NewToFloodlert1.setText("New to Floodlert?");
+        jLabel1_NewToFloodlert1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        Forgot_Password.setText("Forgot Password");
+        Forgot_Password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Forgot_PasswordActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1_NewToFloodlert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1_LogIn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1_LogIn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1_Username)
                             .addComponent(jLabel1_Password))
@@ -84,7 +95,10 @@ public class LogIn extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                             .addComponent(jTextField1_Username)))
-                    .addComponent(jToggleButton1_CreateAccount, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jToggleButton1_CreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1_NewToFloodlert1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1_NewToFloodlert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Forgot_Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -100,11 +114,15 @@ public class LogIn extends javax.swing.JFrame {
                     .addComponent(jPasswordField1_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1_LogIn)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1_NewToFloodlert, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1_NewToFloodlert1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jToggleButton1_CreateAccount)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1_NewToFloodlert, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Forgot_Password)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
@@ -147,6 +165,11 @@ public class LogIn extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jButton1_LogInActionPerformed
+
+    private void Forgot_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Forgot_PasswordActionPerformed
+       ForgotPass.main(null);
+       this.dispose();
+    }//GEN-LAST:event_Forgot_PasswordActionPerformed
         
  
     
@@ -172,8 +195,10 @@ public class LogIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Forgot_Password;
     private javax.swing.JButton jButton1_LogIn;
     private javax.swing.JLabel jLabel1_NewToFloodlert;
+    private javax.swing.JLabel jLabel1_NewToFloodlert1;
     private javax.swing.JLabel jLabel1_Password;
     private javax.swing.JLabel jLabel1_Username;
     private javax.swing.JPasswordField jPasswordField1_Password;
