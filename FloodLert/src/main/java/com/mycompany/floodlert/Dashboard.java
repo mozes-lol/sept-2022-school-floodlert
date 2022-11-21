@@ -231,7 +231,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel1_FloodLevel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jComboBox1_RiverSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno", "Bicol\t", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
+        jComboBox1_RiverSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno", "Bicol", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
         jComboBox1_RiverSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1_RiverSelectActionPerformed(evt);
@@ -395,6 +395,7 @@ public class Dashboard extends javax.swing.JFrame {
     
     ImageIcon RiverReport_Pampanga = new ImageIcon("RiverReport_Pampanga.png");
     ImageIcon RiverReport_Agno = new ImageIcon("RiverReport_Agno.png");
+    ImageIcon RiverReport_Bicol = new ImageIcon("RiverReport_Bicol.png");
     
     private void jComboBox1_RiverSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_RiverSelectActionPerformed
         // When you select a river on the combo box, a picture of the river report will appear below it.
@@ -408,6 +409,10 @@ public class Dashboard extends javax.swing.JFrame {
             case "Agno":
                 jLabel1_RiverReportPicture.setIcon(RiverReport_Agno);
                 System.out.println("Agno");
+                break;
+            case "Bicol":
+                jLabel1_RiverReportPicture.setIcon(RiverReport_Bicol);
+                System.out.println("Bicol");
                 break;
         }
     }//GEN-LAST:event_jComboBox1_RiverSelectActionPerformed
