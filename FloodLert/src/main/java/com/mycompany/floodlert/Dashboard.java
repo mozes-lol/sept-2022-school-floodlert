@@ -53,16 +53,12 @@ public class Dashboard extends javax.swing.JFrame {
         settings = new javax.swing.JButton();
         tabbed_content = new javax.swing.JTabbedPane();
         weather_box = new javax.swing.JPanel();
-        jPanel1_FloodLevel1 = new javax.swing.JPanel();
-        jComboBox1_RiverBasin = new javax.swing.JComboBox<>();
-        jLabel1_basin = new javax.swing.JLabel();
-        jLabel1_Basin1 = new javax.swing.JLabel();
-        typhoon_box = new javax.swing.JPanel();
         jPanel1_FloodLevel = new javax.swing.JPanel();
         jComboBox1_CitySelect = new javax.swing.JComboBox<>();
         jLabel1_FloodLevel = new javax.swing.JLabel();
         jLabel1_FloodLevelData = new javax.swing.JLabel();
         jButton1_SubmitFloodReport = new javax.swing.JButton();
+        typhoon_box = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -152,68 +148,6 @@ public class Dashboard extends javax.swing.JFrame {
         weather_box.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         weather_box.setPreferredSize(new java.awt.Dimension(918, 507));
 
-        jPanel1_FloodLevel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jComboBox1_RiverBasin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno\t", "Bicol\t", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
-        jComboBox1_RiverBasin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1_RiverBasinActionPerformed(evt);
-            }
-        });
-
-        jLabel1_basin.setText("River Basin Update:");
-
-        jLabel1_Basin1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1_Basin1.setText("[NO DATA]");
-        jLabel1_Basin1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
-        javax.swing.GroupLayout jPanel1_FloodLevel1Layout = new javax.swing.GroupLayout(jPanel1_FloodLevel1);
-        jPanel1_FloodLevel1.setLayout(jPanel1_FloodLevel1Layout);
-        jPanel1_FloodLevel1Layout.setHorizontalGroup(
-            jPanel1_FloodLevel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1_FloodLevel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1_FloodLevel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1_RiverBasin, 0, 357, Short.MAX_VALUE)
-                    .addGroup(jPanel1_FloodLevel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1_FloodLevel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1_basin)
-                            .addComponent(jLabel1_Basin1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel1_FloodLevel1Layout.setVerticalGroup(
-            jPanel1_FloodLevel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1_FloodLevel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox1_RiverBasin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1_basin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1_Basin1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
-        );
-
-        javax.swing.GroupLayout weather_boxLayout = new javax.swing.GroupLayout(weather_box);
-        weather_box.setLayout(weather_boxLayout);
-        weather_boxLayout.setHorizontalGroup(
-            weather_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1_FloodLevel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        weather_boxLayout.setVerticalGroup(
-            weather_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(weather_boxLayout.createSequentialGroup()
-                .addComponent(jPanel1_FloodLevel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        tabbed_content.addTab("River Basins", weather_box);
-
-        typhoon_box.setBackground(new java.awt.Color(0, 0, 51));
-        typhoon_box.setForeground(new java.awt.Color(0, 0, 0));
-        typhoon_box.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        typhoon_box.setPreferredSize(new java.awt.Dimension(918, 507));
-
         jPanel1_FloodLevel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jComboBox1_CitySelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT CITY", "Alaminos", "Angeles City", "Antipolo", "Bacolod", "Bacoor", "Bago", "Baguio", "Bais", "Balanga", "Batac", "Batangas City", "Bayawan", "Baybay", "Bayugan", "Biñan", "Bislig", "Bogo", "Borongan", "Butuaan", "Cadbadbaran", "Cabanatuan", "Cabuyao", "Cadiz", "Cagayan de Oro", "Calaca", "Calamba", "Calapan", "Calbayog", "Caloocan", "Candon", "Canlaon", "Carcar", "Catbalogan", "Cauayan", "Cavite City", "Ceby City", "Cotabato City", "Dagupan", "Danao", "Dapitan", "Dasmariñas", "Davao City", "Digos", "Dipolog", "Dumaguete", "El Salvador", "Escalante", "Gapan", "General Santos", "General Trias", "Gingoog", "Guihulngan", "Himamaylan", "Ilagan", "Iligan", "Iloilo City", "Imus", "Iriga", "Isabela", "Kabankalan", "Kidapawan", "Koronadal", "La Carlota", "Lamitan", "Laoag", "Lapu-Lapu City", "Las Piñas", "Legazpi", "Ligao", "Lipa", "Lucena", "Maasin", "Mabalacat", "Makati", "Malabon", "Malaybalay", "Malolos", "Mandaluyong", "Mandaue", "Manila", "Marawi", "Marikina", "Masbate City", "Mati", "Mecauayan", "Muñoz", "Muntinlupa", "Naga (Camarines Sur)", "Naga (Cebu)", "Navotas", "Olongapo", "Ormoc", "Oroquieta", "Ozamiz", "Pagadian", "Palayan", "Panabo", "Parañaque", "Pasay", "Pasig", "Passi", "Puerto Princessa", "Quezon City", "Roxas", "Sagay", "Samal", "San Carlos (Negros Occidental)", "San Carlos (Pangasinan)", "San Fernando (La Union)", "San Fernando (Pampanga)", "San Jose", "San Jose del Monte", "San Juan", "San Pablo", "San Pedro", "Santa Rosa", "Santo Tomas", "Santiago", "Silay", "Sipalay", "Sorsogon City", "Surigao City", "Tabaco", "Tabuk", "Tacloban", "Tacurong", "Tagaytay", "Tagbilaran", "Taguig", "Tagum", "Talisay (Cebu)", "Talisay (Negros Occidental)", "Tanauan", "Tandag", "Tangub", "Tanjay", "Tarlac City", "Tayabas", "Toledo", "Trece Martires", "Tuguegarao", "Urdaneta", "Valencia", "Valenzuela", "Victoras", "Vigan", "Zamboanga City" }));
@@ -268,18 +202,36 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
+        javax.swing.GroupLayout weather_boxLayout = new javax.swing.GroupLayout(weather_box);
+        weather_box.setLayout(weather_boxLayout);
+        weather_boxLayout.setHorizontalGroup(
+            weather_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1_FloodLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        weather_boxLayout.setVerticalGroup(
+            weather_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1_FloodLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        tabbed_content.addTab("Flood Report", weather_box);
+
+        typhoon_box.setBackground(new java.awt.Color(0, 0, 51));
+        typhoon_box.setForeground(new java.awt.Color(0, 0, 0));
+        typhoon_box.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        typhoon_box.setPreferredSize(new java.awt.Dimension(918, 507));
+
         javax.swing.GroupLayout typhoon_boxLayout = new javax.swing.GroupLayout(typhoon_box);
         typhoon_box.setLayout(typhoon_boxLayout);
         typhoon_boxLayout.setHorizontalGroup(
             typhoon_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1_FloodLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 373, Short.MAX_VALUE)
         );
         typhoon_boxLayout.setVerticalGroup(
             typhoon_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1_FloodLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 151, Short.MAX_VALUE)
         );
 
-        tabbed_content.addTab("Flood Report", typhoon_box);
+        tabbed_content.addTab("River Basins", typhoon_box);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -293,15 +245,16 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(searchbar)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(searchbar, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(searchbutton))
+                        .addComponent(searchbutton)
+                        .addGap(27, 27, 27))
                     .addComponent(basicforecast_box, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(localtime)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(settings)))
-                .addContainerGap())
+                        .addComponent(settings))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,8 +267,8 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(basicforecast_box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(searchbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(searchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(searchbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(searchbar)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(localtime)
@@ -391,10 +344,6 @@ public class Dashboard extends javax.swing.JFrame {
         this.dispose();
         Settings.main(null);// TODO add your handling code here:
     }//GEN-LAST:event_settingsActionPerformed
-
-    private void jComboBox1_RiverBasinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_RiverBasinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1_RiverBasinActionPerformed
     
     
     /**
@@ -422,14 +371,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel basicforecast_box;
     private javax.swing.JButton jButton1_SubmitFloodReport;
     private javax.swing.JComboBox<String> jComboBox1_CitySelect;
-    private javax.swing.JComboBox<String> jComboBox1_RiverBasin;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel1_Basin1;
     private javax.swing.JLabel jLabel1_FloodLevel;
     private javax.swing.JLabel jLabel1_FloodLevelData;
-    private javax.swing.JLabel jLabel1_basin;
     private javax.swing.JPanel jPanel1_FloodLevel;
-    private javax.swing.JPanel jPanel1_FloodLevel1;
     public static javax.swing.JLabel localdate;
     public static javax.swing.JLabel localtime;
     public static javax.swing.JLabel location;
