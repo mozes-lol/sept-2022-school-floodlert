@@ -13,10 +13,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import javax.swing.ImageIcon;
 
 
 public class Dashboard extends javax.swing.JFrame {
-
+    
     static void openResultsForm() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
@@ -41,6 +42,8 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         basicforecast_box = new javax.swing.JPanel();
         status = new javax.swing.JLabel();
         temp = new javax.swing.JLabel();
@@ -60,9 +63,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton1_SubmitFloodReport = new javax.swing.JButton();
         typhoon_box = new javax.swing.JPanel();
         jPanel1_FloodLevel2 = new javax.swing.JPanel();
-        jComboBox1_CitySelect1 = new javax.swing.JComboBox<>();
-        jLabel1_FloodLevel1 = new javax.swing.JLabel();
-        jLabel1_FloodLevelData1 = new javax.swing.JLabel();
+        jComboBox1_RiverSelect = new javax.swing.JComboBox<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jLabel1_RiverReportPicture = new javax.swing.JLabel();
+
+        jScrollPane1.setViewportView(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -226,18 +231,15 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel1_FloodLevel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jComboBox1_CitySelect1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno\t", "Bicol\t", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
-        jComboBox1_CitySelect1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox1_RiverSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno", "Bicol\t", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
+        jComboBox1_RiverSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1_CitySelect1ActionPerformed(evt);
+                jComboBox1_RiverSelectActionPerformed(evt);
             }
         });
 
-        jLabel1_FloodLevel1.setText("River Report:");
-
-        jLabel1_FloodLevelData1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1_FloodLevelData1.setText("[NO DATA]");
-        jLabel1_FloodLevelData1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jLabel1_RiverReportPicture.setText("Select a River");
+        jScrollPane2.setViewportView(jLabel1_RiverReportPicture);
 
         javax.swing.GroupLayout jPanel1_FloodLevel2Layout = new javax.swing.GroupLayout(jPanel1_FloodLevel2);
         jPanel1_FloodLevel2.setLayout(jPanel1_FloodLevel2Layout);
@@ -246,24 +248,21 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1_CitySelect1, 0, 357, Short.MAX_VALUE)
                     .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
-                        .addGroup(jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1_FloodLevelData1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1_FloodLevel1))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1_FloodLevel2Layout.createSequentialGroup()
+                        .addComponent(jComboBox1_RiverSelect, 0, 211, Short.MAX_VALUE)
+                        .addGap(152, 152, 152))))
         );
         jPanel1_FloodLevel2Layout.setVerticalGroup(
             jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox1_CitySelect1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBox1_RiverSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1_FloodLevel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1_FloodLevelData1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout typhoon_boxLayout = new javax.swing.GroupLayout(typhoon_box);
@@ -339,7 +338,6 @@ public class Dashboard extends javax.swing.JFrame {
             WeatherAPI.current_area = area;
             WeatherAPI.fetch(WeatherAPI.currentUserArea());
         }
-        
         WeatherAPI.setValues();
     }
     
@@ -394,10 +392,25 @@ public class Dashboard extends javax.swing.JFrame {
         this.dispose();
         Settings.main(null);// TODO add your handling code here:
     }//GEN-LAST:event_settingsActionPerformed
-
-    private void jComboBox1_CitySelect1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_CitySelect1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1_CitySelect1ActionPerformed
+    
+    ImageIcon RiverReport_Pampanga = new ImageIcon("RiverReport_Pampanga.png");
+    ImageIcon RiverReport_Agno = new ImageIcon("RiverReport_Agno.png");
+    
+    private void jComboBox1_RiverSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_RiverSelectActionPerformed
+        // When you select a river on the combo box, a picture of the river report will appear below it.
+        jLabel1_RiverReportPicture.setText(null); // removes the placeholder text by default
+        String river = jComboBox1_RiverSelect.getSelectedItem().toString();
+        switch(river){
+            case "Pampanga":
+                jLabel1_RiverReportPicture.setIcon(RiverReport_Pampanga);
+                System.out.println("Pampanga");
+                break;
+            case "Agno":
+                jLabel1_RiverReportPicture.setIcon(RiverReport_Agno);
+                System.out.println("Agno");
+                break;
+        }
+    }//GEN-LAST:event_jComboBox1_RiverSelectActionPerformed
     
     
     /**
@@ -425,14 +438,16 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel basicforecast_box;
     private javax.swing.JButton jButton1_SubmitFloodReport;
     private javax.swing.JComboBox<String> jComboBox1_CitySelect;
-    private javax.swing.JComboBox<String> jComboBox1_CitySelect1;
+    private javax.swing.JComboBox<String> jComboBox1_RiverSelect;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_FloodLevel;
-    private javax.swing.JLabel jLabel1_FloodLevel1;
     private javax.swing.JLabel jLabel1_FloodLevelData;
-    private javax.swing.JLabel jLabel1_FloodLevelData1;
+    private javax.swing.JLabel jLabel1_RiverReportPicture;
     private javax.swing.JPanel jPanel1_FloodLevel;
     private javax.swing.JPanel jPanel1_FloodLevel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     public static javax.swing.JLabel localdate;
     public static javax.swing.JLabel localtime;
     public static javax.swing.JLabel location;
