@@ -59,6 +59,10 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1_FloodLevelData = new javax.swing.JLabel();
         jButton1_SubmitFloodReport = new javax.swing.JButton();
         typhoon_box = new javax.swing.JPanel();
+        jPanel1_FloodLevel2 = new javax.swing.JPanel();
+        jComboBox1_CitySelect1 = new javax.swing.JComboBox<>();
+        jLabel1_FloodLevel1 = new javax.swing.JLabel();
+        jLabel1_FloodLevelData1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -220,15 +224,57 @@ public class Dashboard extends javax.swing.JFrame {
         typhoon_box.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         typhoon_box.setPreferredSize(new java.awt.Dimension(918, 507));
 
+        jPanel1_FloodLevel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jComboBox1_CitySelect1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno\t", "Bicol\t", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
+        jComboBox1_CitySelect1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1_CitySelect1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1_FloodLevel1.setText("River Report:");
+
+        jLabel1_FloodLevelData1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1_FloodLevelData1.setText("[NO DATA]");
+        jLabel1_FloodLevelData1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
+        javax.swing.GroupLayout jPanel1_FloodLevel2Layout = new javax.swing.GroupLayout(jPanel1_FloodLevel2);
+        jPanel1_FloodLevel2.setLayout(jPanel1_FloodLevel2Layout);
+        jPanel1_FloodLevel2Layout.setHorizontalGroup(
+            jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1_CitySelect1, 0, 357, Short.MAX_VALUE)
+                    .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
+                        .addGroup(jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1_FloodLevelData1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1_FloodLevel1))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel1_FloodLevel2Layout.setVerticalGroup(
+            jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox1_CitySelect1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1_FloodLevel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1_FloodLevelData1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout typhoon_boxLayout = new javax.swing.GroupLayout(typhoon_box);
         typhoon_box.setLayout(typhoon_boxLayout);
         typhoon_boxLayout.setHorizontalGroup(
             typhoon_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 373, Short.MAX_VALUE)
+            .addComponent(jPanel1_FloodLevel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         typhoon_boxLayout.setVerticalGroup(
             typhoon_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 235, Short.MAX_VALUE)
+            .addComponent(jPanel1_FloodLevel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         tabbed_content.addTab("River Basins", typhoon_box);
@@ -348,6 +394,10 @@ public class Dashboard extends javax.swing.JFrame {
         this.dispose();
         Settings.main(null);// TODO add your handling code here:
     }//GEN-LAST:event_settingsActionPerformed
+
+    private void jComboBox1_CitySelect1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_CitySelect1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1_CitySelect1ActionPerformed
     
     
     /**
@@ -375,10 +425,14 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel basicforecast_box;
     private javax.swing.JButton jButton1_SubmitFloodReport;
     private javax.swing.JComboBox<String> jComboBox1_CitySelect;
+    private javax.swing.JComboBox<String> jComboBox1_CitySelect1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_FloodLevel;
+    private javax.swing.JLabel jLabel1_FloodLevel1;
     private javax.swing.JLabel jLabel1_FloodLevelData;
+    private javax.swing.JLabel jLabel1_FloodLevelData1;
     private javax.swing.JPanel jPanel1_FloodLevel;
+    private javax.swing.JPanel jPanel1_FloodLevel2;
     public static javax.swing.JLabel localdate;
     public static javax.swing.JLabel localtime;
     public static javax.swing.JLabel location;
