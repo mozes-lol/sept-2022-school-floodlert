@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,94,0,0,1,64"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1_Where">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Where does the flood take place?"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="60" width="199" height="22"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox1_City">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="4a" green="37" red="21" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="148">
+            <StringItem index="0" value="SELECT CITY"/>
+            <StringItem index="1" value="Alaminos"/>
+            <StringItem index="2" value="Angeles City"/>
+            <StringItem index="3" value="Antipolo"/>
+            <StringItem index="4" value="Bacolod"/>
+            <StringItem index="5" value="Bacoor"/>
+            <StringItem index="6" value="Bago"/>
+            <StringItem index="7" value="Baguio"/>
+            <StringItem index="8" value="Bais"/>
+            <StringItem index="9" value="Balanga"/>
+            <StringItem index="10" value="Batac"/>
+            <StringItem index="11" value="Batangas City"/>
+            <StringItem index="12" value="Bayawan"/>
+            <StringItem index="13" value="Baybay"/>
+            <StringItem index="14" value="Bayugan"/>
+            <StringItem index="15" value="Bi&#xf1;an"/>
+            <StringItem index="16" value="Bislig"/>
+            <StringItem index="17" value="Bogo"/>
+            <StringItem index="18" value="Borongan"/>
+            <StringItem index="19" value="Butuaan"/>
+            <StringItem index="20" value="Cadbadbaran"/>
+            <StringItem index="21" value="Cabanatuan"/>
+            <StringItem index="22" value="Cabuyao"/>
+            <StringItem index="23" value="Cadiz"/>
+            <StringItem index="24" value="Cagayan de Oro"/>
+            <StringItem index="25" value="Calaca"/>
+            <StringItem index="26" value="Calamba"/>
+            <StringItem index="27" value="Calapan"/>
+            <StringItem index="28" value="Calbayog"/>
+            <StringItem index="29" value="Caloocan"/>
+            <StringItem index="30" value="Candon"/>
+            <StringItem index="31" value="Canlaon"/>
+            <StringItem index="32" value="Carcar"/>
+            <StringItem index="33" value="Catbalogan"/>
+            <StringItem index="34" value="Cauayan"/>
+            <StringItem index="35" value="Cavite City"/>
+            <StringItem index="36" value="Ceby City"/>
+            <StringItem index="37" value="Cotabato City"/>
+            <StringItem index="38" value="Dagupan"/>
+            <StringItem index="39" value="Danao"/>
+            <StringItem index="40" value="Dapitan"/>
+            <StringItem index="41" value="Dasmari&#xf1;as"/>
+            <StringItem index="42" value="Davao City"/>
+            <StringItem index="43" value="Digos"/>
+            <StringItem index="44" value="Dipolog"/>
+            <StringItem index="45" value="Dumaguete"/>
+            <StringItem index="46" value="El Salvador"/>
+            <StringItem index="47" value="Escalante"/>
+            <StringItem index="48" value="Gapan"/>
+            <StringItem index="49" value="General Santos"/>
+            <StringItem index="50" value="General Trias"/>
+            <StringItem index="51" value="Gingoog"/>
+            <StringItem index="52" value="Guihulngan"/>
+            <StringItem index="53" value="Himamaylan"/>
+            <StringItem index="54" value="Ilagan"/>
+            <StringItem index="55" value="Iligan"/>
+            <StringItem index="56" value="Iloilo City"/>
+            <StringItem index="57" value="Imus"/>
+            <StringItem index="58" value="Iriga"/>
+            <StringItem index="59" value="Isabela"/>
+            <StringItem index="60" value="Kabankalan"/>
+            <StringItem index="61" value="Kidapawan"/>
+            <StringItem index="62" value="Koronadal"/>
+            <StringItem index="63" value="La Carlota"/>
+            <StringItem index="64" value="Lamitan"/>
+            <StringItem index="65" value="Laoag"/>
+            <StringItem index="66" value="Lapu-Lapu City"/>
+            <StringItem index="67" value="Las Pi&#xf1;as"/>
+            <StringItem index="68" value="Legazpi"/>
+            <StringItem index="69" value="Ligao"/>
+            <StringItem index="70" value="Lipa"/>
+            <StringItem index="71" value="Lucena"/>
+            <StringItem index="72" value="Maasin"/>
+            <StringItem index="73" value="Mabalacat"/>
+            <StringItem index="74" value="Makati"/>
+            <StringItem index="75" value="Malabon"/>
+            <StringItem index="76" value="Malaybalay"/>
+            <StringItem index="77" value="Malolos"/>
+            <StringItem index="78" value="Mandaluyong"/>
+            <StringItem index="79" value="Mandaue"/>
+            <StringItem index="80" value="Manila"/>
+            <StringItem index="81" value="Marawi"/>
+            <StringItem index="82" value="Marikina"/>
+            <StringItem index="83" value="Masbate City"/>
+            <StringItem index="84" value="Mati"/>
+            <StringItem index="85" value="Mecauayan"/>
+            <StringItem index="86" value="Mu&#xf1;oz"/>
+            <StringItem index="87" value="Muntinlupa"/>
+            <StringItem index="88" value="Naga (Camarines Sur)"/>
+            <StringItem index="89" value="Naga (Cebu)"/>
+            <StringItem index="90" value="Navotas"/>
+            <StringItem index="91" value="Olongapo"/>
+            <StringItem index="92" value="Ormoc"/>
+            <StringItem index="93" value="Oroquieta"/>
+            <StringItem index="94" value="Ozamiz"/>
+            <StringItem index="95" value="Pagadian"/>
+            <StringItem index="96" value="Palayan"/>
+            <StringItem index="97" value="Panabo"/>
+            <StringItem index="98" value="Para&#xf1;aque"/>
+            <StringItem index="99" value="Pasay"/>
+            <StringItem index="100" value="Pasig"/>
+            <StringItem index="101" value="Passi"/>
+            <StringItem index="102" value="Puerto Princessa"/>
+            <StringItem index="103" value="Quezon City"/>
+            <StringItem index="104" value="Roxas"/>
+            <StringItem index="105" value="Sagay"/>
+            <StringItem index="106" value="Samal"/>
+            <StringItem index="107" value="San Carlos (Negros Occidental)"/>
+            <StringItem index="108" value="San Carlos (Pangasinan)"/>
+            <StringItem index="109" value="San Fernando (La Union)"/>
+            <StringItem index="110" value="San Fernando (Pampanga)"/>
+            <StringItem index="111" value="San Jose"/>
+            <StringItem index="112" value="San Jose del Monte"/>
+            <StringItem index="113" value="San Juan"/>
+            <StringItem index="114" value="San Pablo"/>
+            <StringItem index="115" value="San Pedro"/>
+            <StringItem index="116" value="Santa Rosa"/>
+            <StringItem index="117" value="Santo Tomas"/>
+            <StringItem index="118" value="Santiago"/>
+            <StringItem index="119" value="Silay"/>
+            <StringItem index="120" value="Sipalay"/>
+            <StringItem index="121" value="Sorsogon City"/>
+            <StringItem index="122" value="Surigao City"/>
+            <StringItem index="123" value="Tabaco"/>
+            <StringItem index="124" value="Tabuk"/>
+            <StringItem index="125" value="Tacloban"/>
+            <StringItem index="126" value="Tacurong"/>
+            <StringItem index="127" value="Tagaytay"/>
+            <StringItem index="128" value="Tagbilaran"/>
+            <StringItem index="129" value="Taguig"/>
+            <StringItem index="130" value="Tagum"/>
+            <StringItem index="131" value="Talisay (Cebu)"/>
+            <StringItem index="132" value="Talisay (Negros Occidental)"/>
+            <StringItem index="133" value="Tanauan"/>
+            <StringItem index="134" value="Tandag"/>
+            <StringItem index="135" value="Tangub"/>
+            <StringItem index="136" value="Tanjay"/>
+            <StringItem index="137" value="Tarlac City"/>
+            <StringItem index="138" value="Tayabas"/>
+            <StringItem index="139" value="Toledo"/>
+            <StringItem index="140" value="Trece Martires"/>
+            <StringItem index="141" value="Tuguegarao"/>
+            <StringItem index="142" value="Urdaneta"/>
+            <StringItem index="143" value="Valencia"/>
+            <StringItem index="144" value="Valenzuela"/>
+            <StringItem index="145" value="Victoras"/>
+            <StringItem index="146" value="Vigan"/>
+            <StringItem index="147" value="Zamboanga City"/>
+          </StringArray>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder roundedCorners="true">
+              <Color PropertyName="color" blue="55" green="46" red="34" type="rgb"/>
+            </LineBorder>
+          </Border>
+        </Property>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Default Cursor"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1_CityActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="50" y="80" width="220" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1_WhatIsTheHeight">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="How high is the flood?"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="100" y="120" width="314" height="22"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JSlider" name="jSlider1_FloodLevel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="55" green="46" red="34" type="rgb"/>
+        </Property>
+        <Property name="majorTickSpacing" type="int" value="1"/>
+        <Property name="maximum" type="int" value="3"/>
+        <Property name="minimum" type="int" value="1"/>
+        <Property name="paintTicks" type="boolean" value="true"/>
+        <Property name="snapToTicks" type="boolean" value="true"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="140" width="137" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1_Low">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Low"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="50" y="140" width="-1" height="22"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1_Hight">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="High"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="240" y="140" width="-1" height="22"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1_SubmitReport">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d2" green="8c" red="48" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Submit Report"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1_SubmitReportActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="80" y="180" width="160" height="20"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1_Cancel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d2" green="8c" red="48" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancel"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1_CancelActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="120" y="210" width="80" height="20"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/com/mycompany/floodlert/floodreport.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="320" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>
