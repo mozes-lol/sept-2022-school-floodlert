@@ -25,6 +25,7 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
         jLabel1.setText("Welcome, " +  FloodLert.username + "!");
         
         WeatherAPI.fetch(WeatherAPI.currentUserArea());
@@ -61,6 +62,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1_FloodLevel = new javax.swing.JLabel();
         jLabel1_FloodLevelData = new javax.swing.JLabel();
         jButton1_SubmitFloodReport = new javax.swing.JButton();
+        Logs = new javax.swing.JButton();
         typhoon_box = new javax.swing.JPanel();
         jPanel1_FloodLevel2 = new javax.swing.JPanel();
         jComboBox1_RiverSelect = new javax.swing.JComboBox<>();
@@ -179,6 +181,13 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        Logs.setText("Logs");
+        Logs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1_FloodLevelLayout = new javax.swing.GroupLayout(jPanel1_FloodLevel);
         jPanel1_FloodLevel.setLayout(jPanel1_FloodLevelLayout);
         jPanel1_FloodLevelLayout.setHorizontalGroup(
@@ -193,7 +202,9 @@ public class Dashboard extends javax.swing.JFrame {
                             .addGroup(jPanel1_FloodLevelLayout.createSequentialGroup()
                                 .addComponent(jLabel1_FloodLevelData, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1_SubmitFloodReport, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1_FloodLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton1_SubmitFloodReport, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(Logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -207,7 +218,10 @@ public class Dashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1_FloodLevelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1_FloodLevelData, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1_SubmitFloodReport))
+                    .addGroup(jPanel1_FloodLevelLayout.createSequentialGroup()
+                        .addComponent(jButton1_SubmitFloodReport)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Logs)))
                 .addContainerGap(114, Short.MAX_VALUE))
         );
 
@@ -416,6 +430,11 @@ public class Dashboard extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jComboBox1_RiverSelectActionPerformed
+
+    private void LogsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogsActionPerformed
+        this.dispose();
+        LogsFR.main(null);
+    }//GEN-LAST:event_LogsActionPerformed
     
     
     /**
@@ -440,6 +459,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Logs;
     private javax.swing.JPanel basicforecast_box;
     private javax.swing.JButton jButton1_SubmitFloodReport;
     private javax.swing.JComboBox<String> jComboBox1_CitySelect;
