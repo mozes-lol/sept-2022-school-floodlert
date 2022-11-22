@@ -150,6 +150,7 @@ public class Dashboard extends javax.swing.JFrame {
         tabbed_content.setBackground(new java.awt.Color(0, 0, 0));
         tabbed_content.setForeground(new java.awt.Color(255, 255, 255));
         tabbed_content.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tabbed_content.setMaximumSize(new java.awt.Dimension(99999, 99999));
         tabbed_content.setPreferredSize(new java.awt.Dimension(920, 540));
 
         weather_box.setBackground(new java.awt.Color(0, 0, 0));
@@ -231,12 +232,14 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel1_FloodLevel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jComboBox1_RiverSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno", "Bicol\t", "Cagayan\t", "Pasig-Marikina (Metro Manila Flood Monitoring)\t", "Abra\t", "Cagayan De Oro\t", "Ilog-Hilabangan\t", "Jalaur\t", "Panay\t", "Tagum-Libuganon\t", "Abulog\t", "Agusan\t", "Agus\t", "Buayan-Malungon\t", "Davao", "Mindanao", "Tagoloan", "Angat Sub-basin", "Binga-Ambuklao-San Roque Sub-basin", "Pantabangan Sub-basin", "Magat Sub-basin" }));
+        jComboBox1_RiverSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT RIVER", "Pampanga", "Agno", "MORE RIVER REPORTS IN-DEVELOPMENT" }));
         jComboBox1_RiverSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1_RiverSelectActionPerformed(evt);
             }
         });
+
+        jScrollPane2.setMinimumSize(new java.awt.Dimension(1, 1));
 
         jLabel1_RiverReportPicture.setText("Select a River");
         jScrollPane2.setViewportView(jLabel1_RiverReportPicture);
@@ -249,7 +252,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1_FloodLevel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1_FloodLevel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1_FloodLevel2Layout.createSequentialGroup()
                         .addComponent(jComboBox1_RiverSelect, 0, 211, Short.MAX_VALUE)
@@ -261,7 +264,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jComboBox1_RiverSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -393,13 +396,18 @@ public class Dashboard extends javax.swing.JFrame {
         Settings.main(null);// TODO add your handling code here:
     }//GEN-LAST:event_settingsActionPerformed
     
-    ImageIcon RiverReport_Pampanga = new ImageIcon("RiverReport_Pampanga.png");
-    ImageIcon RiverReport_Agno = new ImageIcon("RiverReport_Agno.png");
-    
     private void jComboBox1_RiverSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1_RiverSelectActionPerformed
+
+        
+        ImageIcon RiverReport_Pampanga = new ImageIcon("RiverReport_Pampanga.png");
+        ImageIcon RiverReport_Agno = new ImageIcon("RiverReport_Agno.png");
+        ImageIcon RiverReport_Bicol = new ImageIcon("RiverReport_Bicol.png"); // does not display
+        ImageIcon RiverReport_Cagayan = new ImageIcon("RiverReport_Cagayan.png"); // also this
+
         // When you select a river on the combo box, a picture of the river report will appear below it.
         jLabel1_RiverReportPicture.setText(null); // removes the placeholder text by default
         String river = jComboBox1_RiverSelect.getSelectedItem().toString();
+        System.out.println(river);
         switch(river){
             case "Pampanga":
                 jLabel1_RiverReportPicture.setIcon(RiverReport_Pampanga);
@@ -408,6 +416,14 @@ public class Dashboard extends javax.swing.JFrame {
             case "Agno":
                 jLabel1_RiverReportPicture.setIcon(RiverReport_Agno);
                 System.out.println("Agno");
+                break;
+            case "Bicol":
+                jLabel1_RiverReportPicture.setIcon(RiverReport_Bicol);
+                System.out.println("Bicol");
+                break;
+            case "Cagayan":
+                jLabel1_RiverReportPicture.setIcon(RiverReport_Cagayan);
+                System.out.println("Cagayan");
                 break;
         }
     }//GEN-LAST:event_jComboBox1_RiverSelectActionPerformed
