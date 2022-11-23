@@ -7,13 +7,33 @@ package com.mycompany.floodlert;
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkIJTheme;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
 
 public class Dashboard extends javax.swing.JFrame {
@@ -242,6 +262,11 @@ public class Dashboard extends javax.swing.JFrame {
         jScrollPane2.setMinimumSize(new java.awt.Dimension(1, 1));
 
         jLabel1_RiverReportPicture.setText("Select a River");
+        jLabel1_RiverReportPicture.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1_RiverReportPictureMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jLabel1_RiverReportPicture);
 
         javax.swing.GroupLayout jPanel1_FloodLevel2Layout = new javax.swing.GroupLayout(jPanel1_FloodLevel2);
@@ -343,6 +368,65 @@ public class Dashboard extends javax.swing.JFrame {
         }
         WeatherAPI.setValues();
     }
+     public static void openRiverBasin(Icon img) {
+        try{
+            JFrame frame = new JFrame("River Basin (pagasa)");
+            JLabel image = new JLabel();
+            JPanel panel = new JPanel();
+
+            frame.add(panel.add(image));
+            image.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setResizable(false);
+
+            image.setPreferredSize(jComboBox1_RiverSelect.getMaximumSize());
+            panel.setPreferredSize(image.getPreferredSize());
+
+            image.setIcon((ImageIcon) img);
+
+            frame.pack();
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
+
+            frame.addFocusListener(new FocusListener() {
+                @Override
+                public void focusGained(FocusEvent e) {
+                }
+
+                @Override
+                public void focusLost(FocusEvent e) {
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                }
+            });
+
+            image.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                }
+            });
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Failed to Fetch Data from PAGASA");
+        }
+    }
     
     private void jButton1_SubmitFloodReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SubmitFloodReportActionPerformed
         // goes to ReportFlood.java
@@ -427,6 +511,21 @@ public class Dashboard extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_jComboBox1_RiverSelectActionPerformed
+    public static String getFinalURL(String url) throws IOException {
+        HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+        con.setInstanceFollowRedirects(false);
+        con.connect();
+        con.getInputStream();
+
+        if (con.getResponseCode() == HttpURLConnection.HTTP_MOVED_PERM || con.getResponseCode() == HttpURLConnection.HTTP_MOVED_TEMP) {
+            String redirectUrl = con.getHeaderField("Location");
+            return getFinalURL(redirectUrl);
+        }
+        return url;
+    }
+    private void jLabel1_RiverReportPictureMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1_RiverReportPictureMouseClicked
+        openRiverBasin(jLabel1_RiverReportPicture.getIcon());
+    }//GEN-LAST:event_jLabel1_RiverReportPictureMouseClicked
     
     
     /**
@@ -454,7 +553,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel basicforecast_box;
     private javax.swing.JButton jButton1_SubmitFloodReport;
     private javax.swing.JComboBox<String> jComboBox1_CitySelect;
-    private javax.swing.JComboBox<String> jComboBox1_RiverSelect;
+    public static javax.swing.JComboBox<String> jComboBox1_RiverSelect;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_FloodLevel;
     private javax.swing.JLabel jLabel1_FloodLevelData;

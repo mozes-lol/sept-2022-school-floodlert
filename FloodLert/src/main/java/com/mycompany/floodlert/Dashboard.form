@@ -642,6 +642,7 @@
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
                   </AuxValues>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -657,6 +658,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Select a River"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel1_RiverReportPictureMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
